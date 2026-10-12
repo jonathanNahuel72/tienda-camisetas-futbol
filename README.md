@@ -1,16 +1,38 @@
-# React + Vite
+# Camisetas Store
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+E-commerce de camisetas de fútbol desarrollado como proyecto final del curso de React JS en Coderhouse. En esta etapa contiene la estructura base del proyecto; en las próximas entregas se suman el catálogo de productos, las rutas, el carrito de compras, el checkout y la conexión con Firebase.
 
-Currently, two official plugins are available:
+## Tecnologías
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- React 19
+- Vite
+- JavaScript
+- Git y GitHub
 
-## React Compiler
+## Instalación y ejecución
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+1. Clonar el repositorio:
 
-## Expanding the Oxlint configuration
+   ```bash
+   git clone https://github.com/TU-USUARIO/tienda-camisetas-futbol.git
+   ```
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+2. Entrar a la carpeta del proyecto:
+
+   ```bash
+   cd tienda-camisetas-futbol
+   ```
+
+3. Instalar las dependencias:
+
+   ```bash
+   npm install
+   ```
+
+4. Ejecutar en modo desarrollo:
+
+   ```bash
+   npm run dev
+   ```
+
+5. Abrir en el navegador la dirección que muestra la terminal (por defecto `http://localhost:5173`).
