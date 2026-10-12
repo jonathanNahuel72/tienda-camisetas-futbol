@@ -14,7 +14,7 @@ E-commerce de camisetas de fútbol desarrollado como proyecto final del curso de
 1. Clonar el repositorio:
 
    ```bash
-   git clone https://github.com/TU-USUARIO/tienda-camisetas-futbol.git
+   git clone https://github.com/jonathanNahuel72/tienda-camisetas-futbol.git
    ```
 
 2. Entrar a la carpeta del proyecto:
