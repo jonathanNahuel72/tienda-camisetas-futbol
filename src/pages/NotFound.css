@@ -1,0 +1,31 @@
+.not-found {
+  padding: 4rem 1.5rem;
+  text-align: center;
+}
+
+.not-found-code {
+  margin: 0;
+  color: #f5c400;
+  font-size: 5rem;
+  font-weight: 800;
+}
+
+.not-found h2 {
+  margin: 0 0 0.5rem;
+  color: #0b3d2e;
+}
+
+.not-found p {
+  color: #52606d;
+}
+
+.not-found-link {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.6rem 1.5rem;
+  border-radius: 8px;
+  background-color: #0b3d2e;
+  color: #ffffff;
+  font-weight: 600;
+  text-decoration: none;
+}
