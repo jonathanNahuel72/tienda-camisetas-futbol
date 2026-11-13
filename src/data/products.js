@@ -97,10 +97,13 @@ const products = [
   },
 ]
 
-export const getProducts = () => {
+export const getProducts = (categoryId) => {
   return new Promise((resolve) => {
     setTimeout(() => {
-      resolve(products)
+      const result = categoryId
+        ? products.filter((product) => product.category === categoryId)
+        : products
+      resolve(result)
     }, 2000)
   })
 }
