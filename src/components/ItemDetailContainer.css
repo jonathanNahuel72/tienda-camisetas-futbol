@@ -8,3 +8,12 @@
 .detail-error {
   color: #b42318;
 }
+
+.detail-page {
+  padding: 2.5rem 1.5rem;
+}
+
+.detail-message a {
+  color: #0b3d2e;
+  font-weight: 600;
+}
