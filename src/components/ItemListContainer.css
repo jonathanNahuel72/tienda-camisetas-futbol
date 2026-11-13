@@ -8,3 +8,11 @@
   color: #0b3d2e;
   font-size: 2rem;
 }
+
+.item-count-demo {
+  margin-top: 2rem;
+}
+
+.item-count-demo p {
+  color: #52606d;
+}
