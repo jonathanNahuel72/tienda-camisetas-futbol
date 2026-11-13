@@ -9,10 +9,8 @@
   font-size: 2rem;
 }
 
-.item-count-demo {
+.loading {
   margin-top: 2rem;
-}
-
-.item-count-demo p {
   color: #52606d;
+  font-size: 1.1rem;
 }
