@@ -30,16 +30,18 @@
 }
 
 .item-title {
+  flex: 1;
   margin: 0;
   color: #0b3d2e;
   font-size: 1.05rem;
 }
 
-.item-description {
-  flex: 1;
-  margin: 0;
-  color: #52606d;
-  font-size: 0.9rem;
+.item-category {
+  color: #1d7a55;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
 }
 
 .item-price {

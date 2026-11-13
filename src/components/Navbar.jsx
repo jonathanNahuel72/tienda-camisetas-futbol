@@ -1,7 +1,6 @@
+import categories from '../data/categories'
 import CartWidget from './CartWidget'
 import './Navbar.css'
-
-const categorias = ['Selecciones', 'Clubes argentinos', 'Clubes europeos', 'Retro']
 
 function Navbar() {
   return (
@@ -10,10 +9,10 @@ function Navbar() {
 
       <nav>
         <ul className="navbar-categories">
-          {categorias.map((categoria) => (
-            <li key={categoria}>
+          {categories.map((category) => (
+            <li key={category.id}>
               <button className="navbar-link" type="button">
-                {categoria}
+                {category.name}
               </button>
             </li>
           ))}
