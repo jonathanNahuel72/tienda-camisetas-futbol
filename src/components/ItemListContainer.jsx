@@ -1,26 +1,48 @@
 import { useEffect, useState } from 'react'
+import { useParams } from 'react-router-dom'
 import { getProducts } from '../data/products'
+import categories, { getCategoryName } from '../data/categories'
+import NotFound from '../pages/NotFound'
 import ItemList from './ItemList'
 import './ItemListContainer.css'
 
 function ItemListContainer({ greeting }) {
+  const { id: categoryId } = useParams()
   const [items, setItems] = useState([])
   const [loading, setLoading] = useState(true)
 
   useEffect(() => {
+    let ignore = false
+
     const loadProducts = async () => {
-      const data = await getProducts()
-      setItems(data)
-      setLoading(false)
+      setLoading(true)
+      const data = await getProducts(categoryId)
+      if (!ignore) {
+        setItems(data)
+        setLoading(false)
+      }
     }
 
     loadProducts()
-  }, [])
+
+    // Si el usuario cambia de categoría antes de que llegue la respuesta,
+    // se descarta el resultado viejo.
+    return () => {
+      ignore = true
+    }
+  }, [categoryId])
+
+  const categoryExists = !categoryId || categories.some((category) => category.id === categoryId)
+  if (!categoryExists) return <NotFound />
+
+  const title = categoryId ? getCategoryName(categoryId) : greeting
 
   return (
     <main className="item-list-container">
-      <h2>{greeting}</h2>
-      {loading ? <p className="loading">Cargando productos...</p> : <ItemList products={items} />}
+      <h2>{title}</h2>
+      {loading && <p className="loading">Cargando productos...</p>}
+      {!loading && items.length === 0 && <p className="loading">No hay productos en esta categoría.</p>}
+      {!loading && items.length > 0 && <ItemList products={items} />}
     </main>
   )
 }
