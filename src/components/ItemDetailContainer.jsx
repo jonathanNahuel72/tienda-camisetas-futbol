@@ -11,21 +11,29 @@ function ItemDetailContainer() {
   const [error, setError] = useState(null)
 
   useEffect(() => {
+    let ignore = false
+
     const loadProduct = async () => {
       setLoading(true)
       setError(null)
       try {
         const data = await getProductById(productId)
-        setProduct(data)
+        if (!ignore) setProduct(data)
       } catch (err) {
-        setProduct(null)
-        setError(err.message)
+        if (!ignore) {
+          setProduct(null)
+          setError(err.message)
+        }
       } finally {
-        setLoading(false)
+        if (!ignore) setLoading(false)
       }
     }
 
     loadProduct()
+
+    return () => {
+      ignore = true
+    }
   }, [productId])
 
   if (loading) return <p className="detail-message">Cargando...</p>
