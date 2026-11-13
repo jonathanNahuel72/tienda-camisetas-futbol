@@ -1,9 +1,10 @@
+import { Link } from 'react-router-dom'
 import { getCategoryName } from '../data/categories'
 import formatPrice from '../utils/formatPrice'
 import './Item.css'
 
 function Item({ product }) {
-  const { title, category, price, image } = product
+  const { id, title, category, price, image } = product
 
   return (
     <article className="item-card">
@@ -12,6 +13,9 @@ function Item({ product }) {
         <span className="item-category">{getCategoryName(category)}</span>
         <h3 className="item-title">{title}</h3>
         <p className="item-price">{formatPrice(price)}</p>
+        <Link to={`/item/${id}`} className="item-link">
+          Ver detalle
+        </Link>
       </div>
     </article>
   )
